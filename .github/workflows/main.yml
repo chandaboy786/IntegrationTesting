@@ -18,7 +18,9 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: iOS Build Action
         uses: yukiarrr/ios-build-action@v1.11.0
-        export-method: ${{"development"}}
-        team-id :  ${{"HQ2SSMSPGG"}}
+        with:
+          export-method: ${{"development"}}
+          team-id :  ${{"HQ2SSMSPGG"}}
+          project-path: IntegrationTesting.xcodeproj
 
 
