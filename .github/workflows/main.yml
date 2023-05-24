@@ -16,6 +16,13 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Code Coverage Summary Report
-        uses: irongut/CodeCoverageSummary@v1.3.0
+      - name: Generate Code Coverage report
+        id: code-coverage
+        uses: barecheck/code-coverage-action@v1
+        with:
+          barecheck-github-app-token: ${{ 2c9e5952-9f8f-4b62-947b-95f6695f533c }}
+          lcov-file: "./coverage/lcov.info"
+          base-lcov-file: "./coverage/base-lcov.info"
+          send-summary-comment: true
+          show-annotations: "warning"
 
