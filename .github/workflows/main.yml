@@ -1,4 +1,9 @@
-action "send coverage to codecov" {
-  uses = "Atrox/codecov-action@v0.1.2"
-  secrets = ["b82981b3-e45d-4878-8fe7-472cb5a1375e"]
-}
+steps:
+- uses: actions/checkout@master
+- uses: codecov/codecov-action@v3
+  with:
+    token: ${{ b82981b3-e45d-4878-8fe7-472cb5a1375e }}
+    flags: unittests # optional
+    name: codecov-umbrella # optional
+    fail_ci_if_error: true # optional (default = false)
+    verbose: true # optional (default = false)
