@@ -20,7 +20,7 @@ jobs:
         uses: yukiarrr/ios-build-action@v1.11.0
         with:
           export-method: "development"
-          team-id :  ${{"HQ2SSMSPGG"}}
+          team-id :  "HQ2SSMSPGG"
           project-path: IntegrationTesting.xcodeproj
 
 
