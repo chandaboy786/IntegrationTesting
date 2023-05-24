@@ -16,17 +16,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Checkout Code
-        uses: actions/checkout@v1
-
-      - name: Run Jasmine tests
-        run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
-
-      - name: Comment Test Coverage
-        uses: AthleticNet/comment-test-coverage@1.1
-        with:
-          token: ${{ b82981b3-e45d-4878-8fe7-472cb5a1375e }}
-          path: coverage/coverage-summary.json
-          title: Karma Test Coverage
-
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
 
