@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [ master ]
     
-jobs:
-  build:
-  name: CI Build
-  steps:
-    - name: Code Coverage Summary
-      uses: irongut/CodeCoverageSummary@v1.3.0
+- name: Code Coverage Summary
+  uses: irongut/CodeCoverageSummary@v1.3.0
+
