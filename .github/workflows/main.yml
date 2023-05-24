@@ -16,6 +16,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - name: Code Coverage Summary Report
-        uses: irongut/CodeCoverageSummary@v1.3.0
+      - name: iOS Build Action
+        uses: yukiarrr/ios-build-action@v1.11.0
+        export-method: ${{"development"}}
+        team-id :  ${{"HQ2SSMSPGG"}}
+
 
